@@ -1,0 +1,41 @@
+a {
+  color: crimson;
+}
+a:hover {
+  color: blue;
+}
+a:visited {
+  color: yellowgreen;
+}
+div {
+  background-color: black;
+  background-image: url("sample.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 900px;
+  background-position: center;
+  background-size: cover;
+  width: fit-content;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20px;
+  height: 400px;
+  width: 400px;
+  box-shadow: 6px 6px 5px inset grey; /*x-axis y-axis blur inset color*/
+  padding: 15px;
+  margin: auto;
+  display: block;
+  opacity: 0.5px;
+  float: right;
+}
+
+p {
+  color: royalblue;
+}
+div#center {
+  text-align: center;
+}
