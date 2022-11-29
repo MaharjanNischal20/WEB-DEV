@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      /* '*'is an universal selector that select overall in html file*/
+      box-sizing: border-box;
+    }
+    #container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .navigation {
+      flex-basis: 20%;
+      flex-grow: 0;
+      flex-shrink: 1; /*0 for no and 1 for yes*/
+    }
+    .content {
+      flex-basis: 80%;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+    .header {
+      flex-basis: 100%;
+      background-color: #f5f5f5;
+      color: #000;
+      padding: 20px;
+      border-bottom: 2px solid black;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <div class="header">Header</div>
+      <div class="navigation">Navigation</div>
+      <div class="content">
+        Content
+        <h1>Hello World</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          veritatis vero, ipsa facere repellendus ipsam alias nobis! Deleniti
+          unde quas numquam natus distinctio fugit quasi magnam libero maiores,
+          nesciunt quis.
+        </p>
+        <h3>Hello World Again</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
+          ad sequi sed vero fugit possimus, veniam consequatur pariatur dolores
+          modi! Dolores omnis quas maxime dolor repellendus, illo veritatis
+          magni rerum?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
