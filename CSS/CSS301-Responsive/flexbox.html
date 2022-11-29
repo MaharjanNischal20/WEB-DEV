@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #layout {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #sidebar {
+      flex-basis: 20%;
+      border-right: 1px solid #ccc;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    #navigation {
+      flex-basis: 100%;
+      border-bottom: 1px solid #ccc;
+      padding: 30px;
+      text-align: center;
+    }
+    #content {
+      flex-basis: 80%;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    @media (max-width: 450px) {
+      #sidebar,
+      #content {
+        flex-basis: 100%;
+        border-right: 0;
+      }
+    }
+    @media (max-width: 300px) {
+      #navigation {
+        text-align: left;
+        display: none;
+      }
+    }
+  </style>
+  <body>
+    <div id="layout">
+      <div id="navigation">Navigation</div>
+      <div id="sidebar">Sidebar</div>
+      <div id="content">Content</div>
+    </div>
+  </body>
+</html>
