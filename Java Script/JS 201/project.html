@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <strong>Name:</strong>
+    <div id="name">...</div>
+
+    <strong>Height:</strong>
+    <div id="height">...</div>
+
+    <strong>Eye color:</strong>
+    <div id="eye_color">...</div>
+
+    <button class="getRandomcharacter">Randomize!!</button>
+    <script>
+      const button = document.querySelector(".getRandomcharacter");
+      const name = document.getElementById("name");
+      const height = document.getElementById("height");
+      const eye_color = document.getElementById("eye_color");
+
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        name.innerHTML = "<em>Loading....</em>";
+        height.innerHTML = "<em>Loading....</em>";
+        eye_color.innerHTML = "<em>Loading...</em>"; //em is used for changing word into italic
+
+        const randomNumber = Math.ceil(Math.random() * 83);
+
+        fetch(`https://swapi.dev/api/people/${randomNumber}/`)
+          .then((response) => response.json())
+          .then((character) => {
+            name.innerHTML = character["name"];
+            height.innerHTML = character["height"];
+            eye_color.innerHTML = character["eye_color"];
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   console.log(`Wait a 2.5sec.`);
+      //   setTimeout(function () {
+      //     console.log(`Hello, I am after 2.5sec`);
+      //   }, 2500);
+      //   console.log(`thank you`);
+      //   count = 0;
+      //   const myInterval = setInterval(function () {
+      //     console.log(`Hello World!!!`);
+      //     count++;
+
+      //     if (count === 4) {
+      //       clearInterval(myInterval);
+      //       console.log(`Hello Nischal`);
+      //     }
+      //   }, 2000);
+
+      //   while (true) {
+      //     let name = prompt("What is your name?");
+      //     if (name === "nischal") {
+      //       break;
+      //     }
+      //     console.log(`Wrong name please try again!!`);
+      //   }
+
+      const months = ["Jan", "Feb", "March", "April"];
+      const [Jan, Feb] = months; //de-structuring
+      console.log(Jan, Feb);
+
+      const person = {
+        name: "Nischal",
+        age: 21,
+        address: "Agnishala",
+      };
+      const { name, address } = person;
+      delete person["age"]; //you can just delete the object properties, not the object itself.
+
+      //js->math
+      Math.ceil(29.4); // ceil function use garepaxi jahile pani ekstep badhi ko ans aauxa.
+      Math.floor(29.1); //floor function use garisakepaxi ans jahile pani point bhanda kum nai aauxa i.e 29.
+      const calc = Math.floor(Math.random() * 100); // yedi Math.random() matra bhaideko bhaye 0-1 ko bick ko value aauthyo, yedi hamilai 0-100 ko bick ko number chaiyo bhane 100 le multiply garidine.
+      console.log(calc);
+
+      //try and catch function
+      const num = 10;
+      try {
+        // num = num + 20;
+        num.toUpperCase();
+      } catch (error) {
+        console.log("ERROR Logging:", error);
+      } finally {
+        console.log("The final number is", num);
+      }
+
+      //this keyword
+      const person2 = {
+        name: "Nischal",
+        speak() {
+          //it is known as literal function.It is a shortcut of speak=funtion(){}
+          console.log(`My name is ${this.name}`);
+        },
+      };
+      person2.speak();
+
+      //four ways of declaring function
+      // const anomynousFunction=function(){
+      //   ...
+      // }
+      // function func1(){
+      //   ....
+      // }
+
+      func2 = (name) => {
+        console.log(`My name is: ${name}`);
+      };
+      func3 = (name) => console.log(`My caste is ${name}`); // it is used when the body is of 1 line else func 2 type function's style is used.
+      func2("Nischal");
+      func3("Maharjan");
+
+      // JS class
+      class myclassName {
+        setName(name) {
+          this.name = name;
+        }
+        speak() {
+          console.log(`This is my area,said by ${this.name}`);
+        }
+      }
+      const obj = new myclassName();
+      obj.setName("Nischal");
+      obj.speak();
+
+      //Constructor
+      class person3 {
+        constructor(name) {
+          this.name = name;
+        }
+        greetings() {
+          console.log(`Hello from the ${this.name}`);
+        }
+      }
+      const obj1 = new person3("Nischal");
+      obj1.greetings();
+
+      //fetch API
+      fetch("https://swapi.dev/api/people/1/")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        });
+    </script>
+  </body>
+</html>
