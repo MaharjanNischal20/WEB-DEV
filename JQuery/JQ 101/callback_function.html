@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      background-color: green;
+    }
+  </style>
+  <body>
+    <button class="slide">Slide</button>
+    <div class="box"></div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".slide").on("click", function () {
+          $(".box").slideToggle(2000, function () {
+            console.log("Sliding Effect successful!!");
+            // $(this).remove();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

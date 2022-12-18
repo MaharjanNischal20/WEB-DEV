@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: black;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .width-100 {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div class="box blue width-100"></div>
+    <button class="remove_blue">Remove Blue</button>
+    <button class="remove_width">Remove width</button>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const $box = $(".box");
+        const $removeblue = $(".remove_blue");
+        const $removewidth = $(".remove_width");
+
+        $removeblue.on("click", () => {
+          $box.removeClass("blue");
+        });
+        $removewidth.on("click", () => {
+          $box.removeClass("width-100");
+        });
+      });
+    </script>
+  </body>
+</html>

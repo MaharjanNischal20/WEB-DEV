@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQ 101</title>
+  </head>
+  <body>
+    <h1 id="1">Heading #1</h1>
+    <h1 id="2">Heading #2</h1>
+    <button class="custom-change-1">To Change 1</button>
+    <button class="custom-change-2">To Change 2</button>
+    <button class="custom-change-3">To Change paragraph</button>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+      reiciendis. Cumque voluptas recusandae iste itaque distinctio aliquid
+      fugiat nihil enim similique ad ipsum quaerat, reprehenderit at odio est
+      repellat tenetur!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+      reiciendis. Cumque voluptas recusandae iste itaque distinctio aliquid
+      fugiat nihil enim similique ad ipsum quaerat, reprehenderit at odio est
+      repellat tenetur!
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script>
+      $("button.custom-change-1").click(function () {
+        $("h1#1").text("Heading changed via Jquery 1");
+      });
+      $("button.custom-change-2").click(function () {
+        $("h1#2").text("Heading changed via Jquery 2");
+      });
+      $("button.custom-change-3").click(function () {
+        $("p").html("<i>Paragraph changed via Jquery </i>");
+      });
+    </script>
+  </body>
+</html>

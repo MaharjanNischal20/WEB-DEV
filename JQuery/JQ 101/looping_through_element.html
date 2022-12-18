@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>First item here.</div>
+    <div>Second item here.</div>
+    <div>Third item here.</div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("div").each(function (index, element) {
+          const originalText = $(element).text();
+          $(element).text(`${index + 1}. ${originalText}`);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      height: 300px;
+      width: 300px;
+      border: 1px solid red;
+      background-color: aqua;
+      border-radius: 50%;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="box"></div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".box").on("mouseenter", function () {
+          console.log("You have entered the circle.");
+        });
+        $(".box").on("mouseleave", function () {
+          console.warn("You have exited the circle.");
+        });
+      });
+    </script>
+  </body>
+</html>
