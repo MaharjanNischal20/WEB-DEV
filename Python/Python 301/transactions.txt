@@ -1,0 +1,4 @@
+Deposited $40.45			 Balance: $90.45
+Withdrew $29.45			 Balance: $61.0
+Withdrew $10.0			 Balance: $40.0
+Withdrew $30.0			 Balance: $20.0
